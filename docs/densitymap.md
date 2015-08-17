@@ -10,7 +10,6 @@ But wait.. Will that function which takes geometry take line segment as input? I
 
 Yes, I think we can. How about take the starting point of the line segment and go a small direction in both x and y axis. (Based on how fine you want your cells to be). Then for each point find the geohash and do it iteratively till the end point is not reached. Just as I finished writing this line I see a bug. What if a line just touches barely a cell and in the process of incrementing x,y a little bit we move too much and skip that cell.
 
-**Can we use the neighbour tactics**
 ###Take 2
 May be this will work. Take the starting point. Find all it's neighbours. Find which one of those neighbours touch our line. Do it recurrsively and out comes the complete set of geohashes.
 
